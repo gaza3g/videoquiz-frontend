@@ -1,7 +1,7 @@
 /* jshint worker: true */
 'use strict';
 
-importScripts("../../app/bower_components/videogular-questions/questions-worker.js");
+importScripts("questions-worker.js");
 
 onmessage = function(e) {
 
@@ -10,7 +10,6 @@ onmessage = function(e) {
  	var url = webServiceUrl + quizId;
 
  	loadConfig(e.data);
-
 
  	if(quizId)
  	{
