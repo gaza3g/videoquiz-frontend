@@ -1,0 +1,32 @@
+{
+  "name": "videogular-questions-example",
+  "description": "Example project for Videogular Questions",
+  "version": "0.2.0",
+  "license": "MIT",
+  "authors": [
+    "Christopher Baines <cb15g11@soton.ac.uk>",
+    "Christopher Hewett <chewett@hotmail.co.uk>",
+    "Harry Cutts <eternal.linux@gmail.com>",
+    "Maria Lynch <ml26g11@soton.ac.uk>",
+    "Samuel Bennett <sb21g11@soton.ac.uk>"
+  ],
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "angular-loader": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "html5-boilerplate": "~4.3.0",
+    "videogular": "~0.6.1",
+    "videogular-questions": "~0.4.0",
+    "angular-charts": "~0.2.6",
+    "videogular-controls": "~0.6.1",
+    "videogular-themes-default": "~0.6.1",
+    "jjv": "latest",
+    "bootstrap": "~3.2.0",
+    "jquery": "~2.1.1",
+    "videogular-cuepoints": "~1.0.0",
+    "videogular-analytics": "~0.1.0",
+    "angular-strap": "~2.1.6"
+  }
+}

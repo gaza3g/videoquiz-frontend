@@ -1,0 +1,105 @@
+<div class="jumbotron">
+	<div class="container">
+	  <ul class="alphabet">
+	    <li ng-repeat="char in alphabet">
+	      <span ng-click="filterByAlphabet(char)">{{char}}</span>
+	    </li>
+	  </ul>
+	  <ul class="genres">
+	    <li ng-repeat="genre in genres">
+	      <span ng-click="filterByGenre(genre)">{{genre}}</span>
+	    </li>
+	  </ul>
+	</div>
+	</div>
+
+	<div class="container">
+
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    {{headingTitle}}
+	    <div class="pull-right">
+	      <input class="search" type="text" ng-model="query.name" placeholder="Search for quizzes">
+	    </div>
+	  </div>
+	  <div class="panel-body">
+
+		<videogular vg-theme="config.theme.url">
+			<vg-video vg-src="config.sources"></vg-video>
+			<vg-questions vg-questions-theme="config.plugins.questions.theme.url"
+			              vg-questions-data="config.plugins.questions.data.url"
+			              vg-web-service-url="config.plugins.questions.webService.url"
+			              vg-questions-cuepoints="config.plugins.cuepoints"
+			              vg-poll-server-url="config.plugins.questions.pollServer.url">
+			</vg-questions>
+			<vg-analytics vg-analytics-servers="config.plugins.analytics.servers">
+			</vg-analytics>
+			<vg-controls vg-autohide="config.autoHide" vg-autohide-time="config.autoHideTime">
+				<vg-play-pause-button></vg-play-pause-button>
+				<vg-timedisplay>{{ currentTime | date:'mm:ss' }}</vg-timedisplay>
+				<vg-scrubBar>
+					<vg-scrubBarCurrentTime></vg-scrubBarCurrentTime>
+					<vg-cuepoints vg-cuepoints-config="config.plugins.cuepoints" vg-cuepoints-theme="config.plugins.cuepoints.theme.url"></vg-cuepoints>
+				</vg-scrubBar>
+				<vg-timedisplay aria-label="Time left">{{ timeLeft | date:'mm:ss' }}</vg-timedisplay>
+				<vg-volume>
+					<vg-mutebutton></vg-mutebutton>
+					<vg-volumebar></vg-volumebar>
+				</vg-volume>
+				<vg-fullscreenButton></vg-fullscreenButton>
+			</vg-controls>
+		</videogular>
+
+	  </div>
+	</div>
+
+
+
+	  <div class="alert alert-info">
+    This quiz will end a week from now.
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span class="glyphicon glyphicon-comment"></span> Comments
+    </div>
+    <div class="panel-body">
+    	<div>
+        <h4>Gazza</h4>
+
+
+        <div class="alert alert-success">
+	        <small>Today at 9:30am</small>
+	        <p>
+	          <span class="glyphicon glyphicon-thumbs-up"></span>
+	          Good quiz, short, sweet and straight to the point!
+	        </p>
+	        <p>Just when you thought it can't get any better, they researched and came out with an even better widget that surpasses all my expectations!!!</p>
+	    </div>
+
+        </div>
+
+        <h1></h1>
+
+    	<div>
+        <h4>Zach</h4>
+
+        <div class="alert alert-warning">
+	        <small>Today at 8:30am</small>
+	        <p>
+	          <span class="glyphicon glyphicon-thumbs-down"></span>
+	          Nope, just nope. Worst quiz ever!
+	        </p>
+	        <p>I have never been more disappointed by this quiz. It is boring, full of silly dinosaurs and apes. What is the point again?</p>
+	        </div>
+	    </div>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
