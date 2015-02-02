@@ -1,14 +1,9 @@
 {
-  "name": "videogular-questions-example",
-  "description": "Example project for Videogular Questions",
-  "version": "0.2.0",
-  "license": "MIT",
+  "name": "video-quiz",
+  "description": "Video quiz for Wizlearn",
+  "version": "0.0.1",
   "authors": [
-    "Christopher Baines <cb15g11@soton.ac.uk>",
-    "Christopher Hewett <chewett@hotmail.co.uk>",
-    "Harry Cutts <eternal.linux@gmail.com>",
-    "Maria Lynch <ml26g11@soton.ac.uk>",
-    "Samuel Bennett <sb21g11@soton.ac.uk>"
+    "Gazza   <ghazaly@wizlearn.com>"
   ],
   "private": true,
   "dependencies": {
@@ -18,6 +13,7 @@
     "angular-mocks": "~1.2.x",
     "html5-boilerplate": "~4.3.0",
     "videogular": "~0.6.1",
+    "videogular-questions": "~0.4.0",
     "angular-charts": "~0.2.6",
     "videogular-controls": "~0.6.1",
     "videogular-themes-default": "~0.6.1",
