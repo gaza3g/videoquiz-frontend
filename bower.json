@@ -1,6 +1,6 @@
 {
-  "name": "video-quiz",
-  "description": "Video quiz for Wizlearn",
+  "name": "video-quiz-frontend",
+  "description": "Video Quiz",
   "version": "0.0.1",
   "authors": [
     "Gazza   <ghazaly@wizlearn.com>"
