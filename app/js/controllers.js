@@ -36,7 +36,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 						url: "js/get_questions.js?" + $scope.quizid,
 					},
 					webService:{
-						url: "http://videoquiz-service.azurewebsites.net/quiz/",
+						url: "http://localhost:9000/quiz/",
 					},
 					pollServer:{
 						url: "http://127.0.0.1:5000/"
