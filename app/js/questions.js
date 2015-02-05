@@ -172,6 +172,7 @@ angular.module("uk.ac.soton.ecs.videogular.plugins.questions", ['angularCharts']
 
 					var questionDirectives = {
 						"single": "<vg-question-single></vg-question-single>",
+						"confirmation": "<vg-question-confirmation></vg-question-confirmation>",
 						"multiple": "<vg-question-multiple></vg-question-multiple>",
 						"stars": "<vg-question-stars></vg-question-stars>",
 						"text": "<vg-question-text></vg-question-text>",
@@ -373,6 +374,33 @@ angular.module("uk.ac.soton.ecs.videogular.plugins.questions", ['angularCharts']
 
 				$scope.onSubmitDisabled = function(event){
 					return !$scope.questionData.chosen;
+				};
+
+				$scope.init();
+			},
+		};
+	})
+	.directive("vgQuestionConfirmation", function() {
+		return {
+			restrict: "E",
+			templateUrl: 'bower_components/videogular-questions/question-confirmation.html',
+			link: function($scope, elem, attr) {
+
+				$scope.init = function() {
+				};
+
+				$scope.onSubmitClick = function(event){
+					$scope.$emit('submitted', {
+						result: $scope.questionData.chosen
+					});
+				};
+
+				$scope.onSkipClick = function(event){
+					$scope.$emit('skipped');
+				};
+
+				$scope.onSubmitDisabled = function(event){
+					return false;
 				};
 
 				$scope.init();
