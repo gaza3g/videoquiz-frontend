@@ -305,7 +305,7 @@ angular.module("uk.ac.soton.ecs.videogular.plugins.questions", ['angularCharts']
 	.directive("vgQuestionMultiple", function() {
 		return {
 			restrict: "E",
-			templateUrl: 'bower_components/videogular-questions/question-multiple.html',
+			templateUrl: 'bower_components/video-quiz/question-multiple.html',
 			link: function($scope, elem, attr) {
 
 				$scope.init = function() {
@@ -356,7 +356,7 @@ angular.module("uk.ac.soton.ecs.videogular.plugins.questions", ['angularCharts']
 	.directive("vgQuestionSingle", function() {
 		return {
 			restrict: "E",
-			templateUrl: 'bower_components/videogular-questions/question-single.html',
+			templateUrl: 'bower_components/video-quiz/question-single.html',
 			link: function($scope, elem, attr) {
 
 				$scope.init = function() {
@@ -383,7 +383,7 @@ angular.module("uk.ac.soton.ecs.videogular.plugins.questions", ['angularCharts']
 	.directive("vgQuestionConfirmation", function() {
 		return {
 			restrict: "E",
-			templateUrl: 'bower_components/videogular-questions/question-confirmation.html',
+			templateUrl: 'bower_components/video-quiz/question-confirmation.html',
 			link: function($scope, elem, attr) {
 
 				$scope.init = function() {
@@ -410,7 +410,7 @@ angular.module("uk.ac.soton.ecs.videogular.plugins.questions", ['angularCharts']
 	.directive("vgQuestionStars", function() {
 		return {
 			restrict: "E",
-			templateUrl: 'bower_components/videogular-questions/question-stars.html',
+			templateUrl: 'bower_components/video-quiz/question-stars.html',
 			link: function($scope, elem, attr) {
 
 				$scope.init = function() {
@@ -448,7 +448,7 @@ angular.module("uk.ac.soton.ecs.videogular.plugins.questions", ['angularCharts']
 	.directive("vgQuestionText", function() {
 		return {
 			restrict: "E",
-			templateUrl: 'bower_components/videogular-questions/question-text.html',
+			templateUrl: 'bower_components/video-quiz/question-text.html',
 			link: function($scope, elem, attr) {
 
 				$scope.init = function() {
@@ -475,7 +475,7 @@ angular.module("uk.ac.soton.ecs.videogular.plugins.questions", ['angularCharts']
 	.directive("vgQuestionRange", function() {
 		return {
 			restrict: "E",
-			templateUrl: 'bower_components/videogular-questions/question-range.html',
+			templateUrl: 'bower_components/video-quiz/question-range.html',
 			link: function($scope, elem, attr) {
 
 				$scope.init = function() {
@@ -536,7 +536,7 @@ angular.module("uk.ac.soton.ecs.videogular.plugins.questions", ['angularCharts']
 	.directive("vgResultsSingle", function() {
 		return {
 			restrict: "E",
-			templateUrl: 'bower_components/videogular-questions/results-single.html',
+			templateUrl: 'bower_components/video-quiz/results-single.html',
 			link: function($scope, elem, attr) {
 
 				$scope.chartType = 'bar';
@@ -563,7 +563,7 @@ angular.module("uk.ac.soton.ecs.videogular.plugins.questions", ['angularCharts']
 	.directive("vgResultsMultiple", function() {
 		return {
 			restrict: "E",
-			templateUrl: 'bower_components/videogular-questions/results-multiple.html',
+			templateUrl: 'bower_components/video-quiz/results-multiple.html',
 			link: function($scope, elem, attr) {
 
 				$scope.chartType = 'bar';
@@ -605,7 +605,7 @@ angular.module("uk.ac.soton.ecs.videogular.plugins.questions", ['angularCharts']
 			scope: {
 				header: '@'
 			},
-			templateUrl: 'bower_components/videogular-questions/box.html'
+			templateUrl: 'bower_components/video-quiz/box.html'
 		};
 	})
 })();

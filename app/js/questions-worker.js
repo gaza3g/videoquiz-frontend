@@ -1,7 +1,7 @@
 /* jshint worker: true */
 /* global XMLHttpRequest */
 /*
-Events from videogular-questions
+Events from video-quiz
 
 sent at the beginning with general vg-questions config
 {
