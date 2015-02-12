@@ -1,7 +1,7 @@
 /* jshint worker: true */
 'use strict';
 
-importScripts("questions-worker.js");
+importScripts("../bower_components/video-quiz/questions-worker.js");
 
 onmessage = function(e) {
 
