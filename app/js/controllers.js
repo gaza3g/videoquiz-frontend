@@ -33,7 +33,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 						url: "css/quiz.css"
 					},
 					data:{
-						url: "js/get_questions.js?" + $scope.quizid,
+						url: "bower_components/video-quiz/get_questions.js?" + $scope.quizid,
 					},
 					webService:{
 						url: "http://videoquiz-service.azurewebsites.net/quiz/",
