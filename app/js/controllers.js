@@ -22,7 +22,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 			autoHide: false,
 			autoHideTime: 3000,
 			sources: [
-				{src: $sce.trustAsResourceUrl("video.mp4"), type: "video/mp4"},
+				{src: $sce.trustAsResourceUrl("https://videoquizstorage.blob.core.windows.net/asset-9e59093c-8fb3-4f17-b798-570d5998514c/video.mp4?sv=2012-02-12&sr=c&si=2fb819f8-081b-487b-970d-c3d24c91b61b&sig=QMjiVj9H3MlyUACk0qi2HZuWUfiI4ADp7z5rXeQZ2Vw%3D&st=2015-02-11T03%3A39%3A44Z&se=2017-02-10T03%3A39%3A44Z"), type: "video/mp4"},
 			],
 			theme: {
 				url: "videogular.css"
@@ -36,7 +36,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 						url: "js/get_questions.js?" + $scope.quizid,
 					},
 					webService:{
-						url: "http://localhost:9000/quiz/",
+						url: "http://videoquiz-service.azurewebsites.net/quiz/",
 					},
 					pollServer:{
 						url: "http://127.0.0.1:5000/"
