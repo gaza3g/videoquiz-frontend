@@ -36,10 +36,11 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 						url: "bower_components/video-quiz/get_questions.js?" + $scope.quizid,
 					},
 					webService:{
-						url: "http://videoquiz-service.azurewebsites.net/quiz/",
+						url: "http://172.16.184.136:63275/api/quiz/"
 					},
 					pollServer:{
-						url: "http://127.0.0.1:5000/"
+						url: "http://172.16.184.136:63275/api/quiz/response"
+						// url: "http://127.0.0.1:5000/"
 					}
 				},
 				cuepoints: {
