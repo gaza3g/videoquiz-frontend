@@ -14,7 +14,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 	      'Design and Technology', 'Social Studies', 'Home Economics'];
 
 	    $scope.quizid = $routeParams.quizid; 
-
+	    $scope.puid = $routeParams.puid;
 	    $scope.headingTitle = 'Our Story in 1 Minute';
 
 
@@ -36,10 +36,10 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 						url: "bower_components/video-quiz/get_questions.js?" + $scope.quizid,
 					},
 					webService:{
-						url: "http://172.16.184.135:63275/api/quiz/"
+						url: "http://172.16.184.184/api/quiz/"
 					},
 					pollServer:{
-						url: "http://172.16.184.135:63275/api/quiz/response"
+						url: "http://172.16.184.184/api/quiz/response"
 						// url: "http://127.0.0.1:5000/"
 					}
 				},
