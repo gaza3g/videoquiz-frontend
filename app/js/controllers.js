@@ -39,10 +39,10 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 						url: "bower_components/video-quiz/get_questions.js?" + $scope.quizid,
 					},
 					webService:{
-						url: "http://uat.asknlearn.com/api/quiz/"
+						url: "http://anl-dev/api/quiz/"
 					},
 					pollServer:{
-						url: "http://uat.asknlearn.com/api/quiz/response"
+						url: "http://anl-dev/api/quiz/response"
 						// url: "http://127.0.0.1:5000/"
 					}
 				},
