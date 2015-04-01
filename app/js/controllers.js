@@ -42,7 +42,8 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 						url: "http://192.168.7.58/api/quiz/"
 					},
 					pollServer:{
-						url: "http://192.168.7.58/api/quiz/response"
+						// url: "http://192.168.7.58/api/quiz/response"
+						url: "http://192.168.7.58/dev/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse"
 					}
 				},
 				cuepoints: {
