@@ -39,11 +39,11 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 						url: "bower_components/video-quiz/get_questions.js?" + $scope.quizid,
 					},
 					webService:{
-						url: "http://192.168.7.58/api/quiz/"
+						url: "http://uat.asknlearn.com/dev/api/quiz/"
 					},
 					pollServer:{
 						// url: "http://192.168.7.58/api/quiz/response"
-						url: "http://192.168.7.58/dev/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse"
+						url: "http://uat.asknlearn.com/dev/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse"
 					}
 				},
 				cuepoints: {
