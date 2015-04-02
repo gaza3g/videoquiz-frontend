@@ -15,7 +15,16 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 
 	    $scope.quizid = $routeParams.quizid; 
 	    $scope.puid = $routeParams.puid;
+
 	    $scope.headingTitle = 'Our Story in 1 Minute';
+
+	    $scope.webServiceUrl = "http://uat.asknlearn.com/api/quiz/";
+	    $scope.pollServerUrl = "http://uat.asknlearn.com/dev/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse";
+
+	    $http.get($scope.webServiceUrl + "/" + $scope.quizid + 'video').success(function(data) {
+	    	alert(data);
+		    // $scope.users = data;
+		});
 
 	    console.log("PUID:" + $scope.puid);
 	    console.log("QuizID:" + $scope.quizid);
@@ -39,11 +48,10 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams',
 						url: "bower_components/video-quiz/get_questions.js?" + $scope.quizid,
 					},
 					webService:{
-						url: "http://uat.asknlearn.com/api/quiz/"
+						url: $scope.webServiceUrl,
 					},
 					pollServer:{
-						// url: "http://192.168.7.58/api/quiz/response"
-						url: "http://uat.asknlearn.com/dev/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse"
+						url: $scope.pollServerUrl,
 					}
 				},
 				cuepoints: {
