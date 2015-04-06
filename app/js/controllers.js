@@ -77,6 +77,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 				Now that we have the value for the video url, we'll then 
 				assign it once we get it.
 			*/
+			console.log("videoUrl: " + tmpResult[0]);
 	    	$scope.config.sources = [{src: $sce.trustAsResourceUrl(tmpResult[0]), type: "video/mp4"}]
 		}) 
 
