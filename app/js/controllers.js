@@ -79,6 +79,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 			*/
 			console.log("videoUrl: " + tmpResult[0]);
 			var videoUrl = tmpResult[0].replace("\"", "");
+			videoUrl = videoUrl.replace("\"", "");
 	    	$scope.config.sources = [{src: videoUrl, type: "video/mp4"}]
 		}) 
 
