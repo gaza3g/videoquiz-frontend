@@ -21,7 +21,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 	    $scope.webServiceUrl = "http://uat.asknlearn.com/api/quiz/";
 	    $scope.pollServerUrl = "http://uat.asknlearn.com/dev/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse";
 
-	    $http.get($scope.webServiceUrl + "/" + $scope.quizid + 'video').success(function(data) {
+	    $http.get($scope.webServiceUrl  + $scope.quizid + '/video').success(function(data) {
 	    	alert(data);
 		    // $scope.users = data;
 		});
