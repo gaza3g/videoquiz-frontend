@@ -1,0 +1,3 @@
+[submodule "app/bower_components/video-quiz"]
+	path = app/bower_components/video-quiz
+	url = https://github.com/gaza3g/video-quiz
