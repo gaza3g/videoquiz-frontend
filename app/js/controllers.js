@@ -27,6 +27,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 		$scope.config = {
 			autoHide: false,
 			autoHideTime: 3000,
+			puid: $scope.puid,
 			sources: [
 			],
 			theme: {
