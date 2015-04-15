@@ -1,17 +1,4 @@
-<div class="jumbotron">
-	<div class="container">
-	  <ul class="alphabet">
-	    <li ng-repeat="char in alphabet">
-	      <span ng-click="filterByAlphabet(char)">{{char}}</span>
-	    </li>
-	  </ul>
-	  <ul class="genres">
-	    <li ng-repeat="genre in genres">
-	      <span ng-click="filterByGenre(genre)">{{genre}}</span>
-	    </li>
-	  </ul>
-	</div>
-	</div>
+
 
 	<div class="container">
 
@@ -89,9 +76,24 @@
 </div>
  -->
 
+ <div class="row">
+    <div class="col-sm-offset-5 col-sm-2 text-center">
+        <div class="btn-group" data-toggle="buttons">
+		 	<button ng-click="SubmitQuiz()" type="button" class="btn btn-primary center-block">
+		 		Submit Quiz
+		 	</button>
+        </div>
+    </div>
+</div>
+
+
 
 
 </div>
 
 
 
+<div class="jumbotron">
+    <div class="container">
+    </div>
+</div>

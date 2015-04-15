@@ -2,8 +2,8 @@
 
 var videoQuizControllers = angular.module('videoQuizControllers', []);
 
-videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$http', '$q',
-	function($scope, $sce, $routeParams, $http, $q) {
+videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$http', '$q', '$window',
+	function($scope, $sce, $routeParams, $http, $q, $window) {
 
 		$scope.alphabet = ['0-9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 	      'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
@@ -21,6 +21,14 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 
 	    $scope.webServiceUrl = "http://uat.asknlearn.com/api/quiz/";
 	    $scope.pollServerUrl = "http://uat.asknlearn.com/dev/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse";
+
+
+	    $scope.SubmitQuiz = function() {
+	    	var submitUrl = 'http://uat.asknlearn.com/dev/Quiz/QZN_QuizSubmit.aspx?qid=' + $scope.quizid + '&mode=&p=&hidetopmenu=true';
+
+	    	$window.location.href = submitUrl;
+
+	    }
 
 
 
