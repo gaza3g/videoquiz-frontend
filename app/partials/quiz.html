@@ -2,11 +2,13 @@
     <div class="panel panel-default">
         <div class="panel-heading">{{headingTitle}}</div>
         <div class="panel-body">
-        	<div class="alert text-center">
-        		<strong>
-        			Press Play ► to begin. Video might take 2 - 5 mins to load.
-        		</strong>
+<!--         	<div class="alert text-center">
         	</div>
+ -->        		<h4 class="text-center">
+        		<span class="label label-info">
+        			Press Play ► to begin. Video might take 2 - 5 mins to load.
+        		</span>
+        		</h4>
             <videogular vg-theme="config.theme.url">
                 <vg-video vg-src="config.sources"></vg-video>
                 <vg-questions vg-questions-theme="config.plugins.questions.theme.url" vg-questions-data="config.plugins.questions.data.url" vg-web-service-url="config.plugins.questions.webService.url" vg-questions-cuepoints="config.plugins.cuepoints" vg-puid="config.puid" vg-poll-server-url="config.plugins.questions.pollServer.url">
@@ -32,7 +34,7 @@
     </div>
     <div class="alert alert-warning text-center">
     	<strong>
-	    	Click on Submit Quiz only when video has finished playing.
+	    	Click on <span class="label label-primary">Submit Quiz</span> only when video has finished playing.
 	    </strong>
 	</div>
 
@@ -42,7 +44,7 @@
  -->
         <div class="col-sm-offset-5 col-sm-2 text-center">
             <div class="btn-group" data-toggle="buttons">
-                <button ng-click="SubmitQuiz()" type="button" class="btn btn-primary center-block">
+                <button ng-click="SubmitQuiz()" type="button" class="btn btn-primary btn-lg center-block">
                     Submit Quiz
                 </button>
             </div>
