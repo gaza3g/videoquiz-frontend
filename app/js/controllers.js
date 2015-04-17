@@ -17,7 +17,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 	    $scope.puid = $routeParams.puid;
 	    $scope.videoUrl = '';
 
-	    $scope.headingTitle = 'Our Story in 1 Minute';
+	    $scope.headingTitle = 'Video Quiz';
 
 	    $scope.webServiceUrl = "http://uat.asknlearn.com/api/quiz/";
 	    $scope.pollServerUrl = "http://uat.asknlearn.com/dev/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse";
