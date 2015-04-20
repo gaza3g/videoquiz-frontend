@@ -10,7 +10,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 	    $scope.quizid = $routeParams.quizid; 
 	    $scope.puid = $routeParams.puid;
 
-	    $scope.headingTitle = 'Video Quiz';
+	    $scope.headingTitle = '';
 	    $scope.webServiceUrl = 'http://' + $scope.domainpath + '/api/' + $scope.instance + '/quiz/';
 	    $scope.pollServerUrl = 'http://' + $scope.domainpath + '/' + $scope.instance + '/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse';
 
@@ -62,12 +62,14 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 
 		/* Retrieve Video URL */
 		var reqVideoUrl = $http.get($scope.webServiceUrl  + $scope.quizid + '/video');
+		var reqQuizTitle = $http.get($scope.webServiceUrl  + $scope.quizid + '/title');
+
 
 		/* 
 			In future when we have more than just one requests, we can fill up the $q array
 			below.
 		*/
-		$q.all([reqVideoUrl]).then(function(result) {
+		$q.all([reqVideoUrl, reqQuizTitle]).then(function(result) {
 			var tmp = [];
 			angular.forEach(result, function(response) {
 				tmp.push(response.data);
@@ -75,13 +77,13 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 			return tmp;
 		}).then(function(tmpResult) {
 			/* 
-				Now that we have the value for the video url, we'll then 
-				assign it once we get it.
+				Assign to scope once we have retrieved both
+				video url and quiz title.
 			*/
-			console.log("videoUrl: " + tmpResult[0]);
-			var videoUrl = tmpResult[0].replace("\"", "");
-			videoUrl = videoUrl.replace("\"", "");
-	    	$scope.config.sources = [{src: videoUrl, type: "video/mp4"}]
+	    	$scope.config.sources = [{src: tmpResult[0], type: "video/mp4"}]
+
+	    	$scope.headingTitle = tmpResult[1];
+
 		}) 
 
 	}
