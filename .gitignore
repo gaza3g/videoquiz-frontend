@@ -17,6 +17,7 @@ angular-motion
 angular-route
 angular-sanitize
 angular-strap
+angular-loading-bar
 bootstrap
 d3
 html5-boilerplate

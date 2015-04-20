@@ -5,9 +5,8 @@
 <!--         	<div class="alert text-center">
         	</div>
  -->        		<h4 class="text-center">
-        		<span class="label label-info">
-        			Press Play ► to begin. Video might take 2 - 5 mins to load.
-        		</span>
+        		<span class="label label-danger">{{loading}}</span>
+                <span class="label label-success">{{loaded}}</span>
         		</h4>
             <videogular vg-theme="config.theme.url">
                 <vg-video vg-src="config.sources"></vg-video>

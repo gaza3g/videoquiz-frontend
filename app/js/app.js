@@ -9,6 +9,7 @@ var videoQuizApp = angular.module('videoQuizApp', [
   'uk.ac.soton.ecs.videogular.plugins.questions',
   'uk.ac.soton.ecs.videogular.plugins.cuepoints',
   'uk.ac.soton.ecs.videogular.plugins.analytics',
+  'angular-loading-bar',
   'videoQuizControllers'
 ]);
 

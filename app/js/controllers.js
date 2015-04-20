@@ -59,6 +59,15 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 			}
 		};
 
+		$scope.$on('cfpLoadingBar:started', function(event, data) {
+			$scope.loading = "Loading video. Please wait..."
+		});
+
+		$scope.$on('cfpLoadingBar:completed', function(event, data) {
+			$scope.loading = '';
+			$scope.loaded = "Video is loaded. Press Play ► to begin ";
+		});
+
 
 		/* Retrieve Video URL */
 		var reqVideoUrl = $http.get($scope.webServiceUrl  + $scope.quizid + '/video');
