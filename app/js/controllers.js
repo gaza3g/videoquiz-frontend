@@ -11,13 +11,13 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 	    $scope.puid = $routeParams.puid;
 
 	    $scope.headingTitle = 'Video Quiz';
-	    $scope.webServiceUrl = 'http://' + $scope.domainpath + '/api/quiz/';
+	    $scope.webServiceUrl = 'http://' + $scope.domainpath + '/api/' + $scope.instance + '/quiz/';
 	    $scope.pollServerUrl = 'http://' + $scope.domainpath + '/' + $scope.instance + '/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse';
 
 	    $scope.videoUrl = '';
 
 	    $scope.SubmitQuiz = function() {
-	    	var submitUrl = 'http://uat.asknlearn.com/dev/Quiz/QZN_QuizSubmit.aspx?qid=' + $scope.quizid + '&mode=&p=&hidetopmenu=true';
+	    	var submitUrl = 'http://' + $scope.domainpath + '/' + $scope.instance + '/Quiz/QZN_QuizSubmit.aspx?qid=' + $scope.quizid + '&mode=&p=&hidetopmenu=true';
 	    	$window.location.href = submitUrl;
 
 	    }
@@ -59,6 +59,8 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 			}
 		};
 
+
+		/* Retrieve Video URL */
 		var reqVideoUrl = $http.get($scope.webServiceUrl  + $scope.quizid + '/video');
 
 		/* 
