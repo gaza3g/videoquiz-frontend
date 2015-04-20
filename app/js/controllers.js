@@ -13,6 +13,8 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 	      'Physics', 'Chemistry', 'Additional Mathematics', 'Biology', 'English Literature', 
 	      'Design and Technology', 'Social Studies', 'Home Economics'];
 
+	    $scope.domainpath = $routeParams.domainpath;
+	    $scope.instance = $routeParams.instance;
 	    $scope.quizid = $routeParams.quizid; 
 	    $scope.puid = $routeParams.puid;
 	    $scope.videoUrl = '';
