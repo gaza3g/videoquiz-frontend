@@ -5,34 +5,22 @@ var videoQuizControllers = angular.module('videoQuizControllers', []);
 videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$http', '$q', '$window',
 	function($scope, $sce, $routeParams, $http, $q, $window) {
 
-		$scope.alphabet = ['0-9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-	      'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
-	      'Y', 'Z'];
-
-	    $scope.genres = ['Mathematics', 'Science', 'History', 'Geography', 'English Language',
-	      'Physics', 'Chemistry', 'Additional Mathematics', 'Biology', 'English Literature', 
-	      'Design and Technology', 'Social Studies', 'Home Economics'];
-
 	    $scope.domainpath = $routeParams.domainpath;
 	    $scope.instance = $routeParams.instance;
 	    $scope.quizid = $routeParams.quizid; 
 	    $scope.puid = $routeParams.puid;
-	    $scope.videoUrl = '';
 
 	    $scope.headingTitle = 'Video Quiz';
+	    $scope.webServiceUrl = 'http://' + $scope.domainpath + '/api/quiz/';
+	    $scope.pollServerUrl = 'http://' + $scope.domainpath + '/' + $scope.instance + '/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse';
 
-	    $scope.webServiceUrl = "http://uat.asknlearn.com/api/quiz/";
-	    $scope.pollServerUrl = "http://uat.asknlearn.com/dev/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse";
-
+	    $scope.videoUrl = '';
 
 	    $scope.SubmitQuiz = function() {
 	    	var submitUrl = 'http://uat.asknlearn.com/dev/Quiz/QZN_QuizSubmit.aspx?qid=' + $scope.quizid + '&mode=&p=&hidetopmenu=true';
-
 	    	$window.location.href = submitUrl;
 
 	    }
-
-
 
 		$scope.config = {
 			autoHide: false,
