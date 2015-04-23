@@ -60,12 +60,12 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 		};
 
 		$scope.$on('cfpLoadingBar:started', function(event, data) {
-			$scope.loading = "Loading video. Please wait..."
+			$scope.loading = "Loading quiz data. Please wait..."
 		});
 
 		$scope.$on('cfpLoadingBar:completed', function(event, data) {
 			$scope.loading = '';
-			$scope.loaded = "Video is loaded. Press Play ► to begin ";
+			$scope.loaded = "Quiz data has been loaded. Press Play ► to begin.";
 		});
 
 
@@ -73,11 +73,6 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 		var reqVideoUrl = $http.get($scope.webServiceUrl  + $scope.quizid + '/video');
 		var reqQuizTitle = $http.get($scope.webServiceUrl  + $scope.quizid + '/title');
 
-
-		/* 
-			In future when we have more than just one requests, we can fill up the $q array
-			below.
-		*/
 		$q.all([reqVideoUrl, reqQuizTitle]).then(function(result) {
 			var tmp = [];
 			angular.forEach(result, function(response) {
