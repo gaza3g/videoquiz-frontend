@@ -19,7 +19,11 @@ videoQuizApp.config(['$routeProvider',
 			when('/', {
 				templateUrl: 'partials/default.html'
 			}).
-			when('/:domainpath/:instance/:quizid/:puid', {
+			when('/:domainpath/:instance/:quizid/:puid/', {
+				templateUrl: 'partials/quiz.html',
+				controller: 'QuizCtrl'
+			}).
+			when('/:domainpath/:instance/:quizid/:puid/:hashtoken', {
 				templateUrl: 'partials/quiz.html',
 				controller: 'QuizCtrl'
 			}).

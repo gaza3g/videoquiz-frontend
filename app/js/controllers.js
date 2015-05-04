@@ -9,10 +9,11 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 	    $scope.instance = $routeParams.instance;
 	    $scope.quizid = $routeParams.quizid; 
 	    $scope.puid = $routeParams.puid;
+	    $scope.hashtoken = $routeParams.hashtoken;
 
 	    $scope.headingTitle = '';
 	    $scope.webServiceUrl = 'http://' + $scope.domainpath + '/api/' + $scope.instance + '/quiz/';
-	    $scope.pollServerUrl = 'http://' + $scope.domainpath + '/' + $scope.instance + '/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse';
+	    $scope.pollServerUrl = 'http://' + $scope.domainpath + '/' + $scope.instance + '/Webservice/Quiz/QuizPublicWebService.asmx/QZN_SaveUserResponse';
 
 	    $scope.videoUrl = '';
 
@@ -26,6 +27,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 			autoHide: false,
 			autoHideTime: 3000,
 			puid: $scope.puid,
+			hashtoken: $scope.hashtoken,
 			sources: [
 			],
 			theme: {
