@@ -13,7 +13,7 @@
     "angular-mocks": "~1.2.x",
     "html5-boilerplate": "~4.3.0",
     "videogular": "~0.6.1",
-    "video-quiz": "https://github.com/gaza3g/video-quiz.git#DEV",
+    "video-quiz": "https://github.com/gaza3g/video-quiz.git",
     "angular-charts": "~0.2.6",
     "videogular-controls": "~0.6.1",
     "videogular-themes-default": "~0.6.1",
