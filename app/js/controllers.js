@@ -9,6 +9,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 	    $scope.instance = $routeParams.instance;
 	    $scope.quizid = $routeParams.quizid; 
 	    $scope.puid = $routeParams.puid;
+	    $scope.hashtoken = $routeParams.hashtoken;
 
 	    $scope.headingTitle = '';
 	    $scope.webServiceUrl = 'http://' + $scope.domainpath + '/api/' + $scope.instance + '/quiz/';
@@ -26,6 +27,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 			autoHide: false,
 			autoHideTime: 3000,
 			puid: $scope.puid,
+			hashtoken: $scope.hashtoken,
 			sources: [
 			],
 			theme: {
