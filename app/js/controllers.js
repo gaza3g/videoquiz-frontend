@@ -13,8 +13,7 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 
 	    $scope.headingTitle = '';
 	    $scope.webServiceUrl = 'http://' + $scope.domainpath + '/api/' + $scope.instance + '/quiz/';
-	    // $scope.pollServerUrl = 'http://' + $scope.domainpath + '/' + $scope.instance + '/Webservice/Quiz/QuizPublicWebService.asmx/QZN_SaveUserResponse';
-	    $scope.pollServerUrl = 'http://' + $scope.domainpath + '/' + $scope.instance + '/Webservice/Quiz/QZN_QuizWebService.asmx/QZN_SaveUserResponse';
+	    $scope.pollServerUrl = 'http://' + $scope.domainpath + '/' + $scope.instance + '/Webservice/Quiz/QuizPublicWebService.asmx/QZN_SaveUserResponse';
 
 	    $scope.videoUrl = '';
 
