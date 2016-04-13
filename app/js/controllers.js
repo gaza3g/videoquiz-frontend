@@ -12,13 +12,13 @@ videoQuizControllers.controller('QuizCtrl', ['$scope', '$sce', '$routeParams','$
 	    $scope.hashtoken = $routeParams.hashtoken;
 
 	    $scope.headingTitle = '';
-	    $scope.webServiceUrl = 'http://' + $scope.domainpath + '/api/' + $scope.instance + '/quiz/';
-	    $scope.pollServerUrl = 'http://' + $scope.domainpath + '/' + $scope.instance + '/Webservice/Quiz/QuizPublicWebService.asmx/QZN_SaveUserResponse';
+	    $scope.webServiceUrl = 'https://' + $scope.domainpath + '/api/' + $scope.instance + '/quiz/';
+	    $scope.pollServerUrl = 'https://' + $scope.domainpath + '/' + $scope.instance + '/Webservice/Quiz/QuizPublicWebService.asmx/QZN_SaveUserResponse';
 
 	    $scope.videoUrl = '';
 
 	    $scope.SubmitQuiz = function() {
-	    	var submitUrl = 'http://' + $scope.domainpath + '/' + $scope.instance + '/Quiz/QZN_QuizSubmit.aspx?qid=' + $scope.quizid + '&mode=&p=&hidetopmenu=true';
+	    	var submitUrl = 'https://' + $scope.domainpath + '/' + $scope.instance + '/Quiz/QZN_QuizSubmit.aspx?qid=' + $scope.quizid + '&mode=&p=&hidetopmenu=true';
 	    	$window.location.href = submitUrl;
 
 	    }
